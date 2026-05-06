@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cofre Secreto</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Share+Tech+Mono&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <div class="noise"></div>
+
+  <div class="bolts">
+    <span class="bolt top-left"></span>
+    <span class="bolt top-right"></span>
+    <span class="bolt bottom-left"></span>
+    <span class="bolt bottom-right"></span>
+  </div>
+
+  <main class="safe">
+
+    <header class="safe__header">
+      <div class="safe__icon" aria-hidden="true">
+        <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="4" y="10" width="56" height="44" rx="4" stroke="currentColor" stroke-width="3"/>
+          <circle cx="32" cy="32" r="12" stroke="currentColor" stroke-width="2.5"/>
+          <circle cx="32" cy="32" r="5" fill="currentColor"/>
+          <line x1="32" y1="20" x2="32" y2="24" stroke="currentColor" stroke-width="2"/>
+          <line x1="32" y1="40" x2="32" y2="44" stroke="currentColor" stroke-width="2"/>
+          <line x1="20" y1="32" x2="24" y2="32" stroke="currentColor" stroke-width="2"/>
+          <line x1="40" y1="32" x2="44" y2="32" stroke="currentColor" stroke-width="2"/>
+          <circle cx="52" cy="32" r="4" stroke="currentColor" stroke-width="2"/>
+          <line x1="52" y1="28" x2="52" y2="10" stroke="currentColor" stroke-width="2"/>
+          <rect x="10" y="26" width="6" height="12" rx="2" stroke="currentColor" stroke-width="2"/>
+        </svg>
+      </div>
+      <h1 class="safe__title">Cofre Secreto</h1>
+      <p class="safe__subtitle">Descubra o código de 4 dígitos</p>
+    </header>
+
+    <section class="safe__display" aria-label="Código digitado">
+      <div class="display__slots">
+        <div class="slot" id="slot-0" aria-live="polite"></div>
+        <div class="slot" id="slot-1" aria-live="polite"></div>
+        <div class="slot" id="slot-2" aria-live="polite"></div>
+        <div class="slot" id="slot-3" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <section class="safe__keypad" aria-label="Teclado numérico">
+      <div class="keypad__grid">
+        <button class="key" data-digit="1" aria-label="1">1</button>
+        <button class="key" data-digit="2" aria-label="2">2</button>
+        <button class="key" data-digit="3" aria-label="3">3</button>
+        <button class="key" data-digit="4" aria-label="4">4</button>
+        <button class="key" data-digit="5" aria-label="5">5</button>
+        <button class="key" data-digit="6" aria-label="6">6</button>
+        <button class="key" data-digit="7" aria-label="7">7</button>
+        <button class="key" data-digit="8" aria-label="8">8</button>
+        <button class="key" data-digit="9" aria-label="9">9</button>
+        <button class="key key--zero" data-digit="0" aria-label="0">0</button>
+      </div>
+    </section>
+
+    <button class="safe__open-btn" id="open-btn" aria-label="Abrir cofre">
+      <span class="open-btn__icon" aria-hidden="true">🔓</span>
+      <span class="open-btn__label">Abrir</span>
+    </button>
+
+    <div class="safe__message" id="message" role="alert" aria-live="assertive"></div>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
